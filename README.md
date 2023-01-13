@@ -66,4 +66,10 @@ otherwise it would simply have been a question of manually configuring the markd
 
 which is just the default included markdown extensions (see https://docs.getpelican.com/en/latest/settings.html) and the mermaid one included in the bottom. I interpolated this from this page for the python markdown package: https://pypi.org/project/md-mermaid/.
 
-but somehow it doesn't work and the pelican compilar in CMD gives this error when recompiling: "No module named 'markdown.extensions.md_mermaid'". I just dont think it is supported.
+but somehow it doesn't work and the pelican compilar in CLI (command prompt) gives this error when recompiling: "No module named 'markdown.extensions.md_mermaid'". I just dont think it is supported by pelican.
+
+## This is why I choose jekyll over pelican:
+
+Pelican has no inbuilt support for Mermaid charts. i need to import the mermaid.js file inside a script tag and then enclose the mermaid chart inside a div tag.
+
+Jekyll has inbuilt support for Mermaid charts. Jekyll is inbuilt into github pages, meaning I don't need to compile on my local pc and then push it to my github repo. I do need to create the initial site with the CLI, but after pushing it to my repo, adding new posts can be done inside the github web interface.
