@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content="Pelican" />
+        <title>Two-way binding in Vue.js</title>
+        <link rel="stylesheet" href="./theme/css/main.css" />
+        <meta name="description" content="In this example, we have an input element and a paragraph element. The v-model directive is used to bind the value of the input element to a data..." />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="./">Tafsir notes</a></h1>
+                <nav><ul>
+                    <li class="active"><a href="./category/python.html">Python</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./two-way-binding-in-vuejs.html" rel="bookmark"
+           title="Permalink to Two-way binding in Vue.js">Two-way binding in Vue.js</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2019-10-20T11:20:00+02:00">
+                Published: sø 20 oktober 2019
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="./author/attila-vural.html">Attila Vural</a>
+        </address>
+<p>In <a href="./category/python.html">Python</a>.</p>
+<p>tags: <a href="./tag/pelican.html">pelican</a> <a href="./tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>In this example, we have an input element and a paragraph element. The v-model directive is used to bind the value of the input element to a data property called message.</p>
+<p>The message property is defined in the Vue instance's data object. The {{ message }} syntax in the paragraph element is a template expression that will be replaced with the value of the message property when the view is rendered.</p>
+<p>So, when you load the example in a browser, you will see the text 'Hello World!' written in the paragraph, and when you type something into the input, the text written in the paragraph will change, reflecting the change you made in the input.</p>
+<p>This is an example of two-way data binding because any changes made to the input element will be reflected in the message property and in turn, the paragraph element, and any changes made to the message property will be reflected in the input and the paragraph.</p>
+<p>It's worth noting that Vue.js uses a one-way data flow, meaning that the data should flow from the parent component to the child component, so that the child component can only change the data using the specific events or methods provided by the parent. However, it has a shorthand to achieve two-way data binding v-model which is nothing but a shorthand of v-bind and v-on:input</p>
+<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.jsdelivr.net/npm/vue@3.2.45/dist/vue.global.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;app&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;message&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Enter a message&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createApp</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Vue</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nx">createApp</span><span class="p">({</span><span class="w"></span>
+<span class="w">            </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Hello Vue!&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="p">};</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">}).</span><span class="nx">mount</span><span class="p">(</span><span class="s2">&quot;#app&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
+mermaid.initialize({ startOnLoad: true });
+</script>
+<p>​<pre class="mermaid">
+graph TD 
+A[Client] --&gt; B[Load Balancer] 
+B --&gt; C[Server01] 
+B --&gt; D[Server02]
+</pre></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+        </section><!-- /#extras -->
+
+</body>
+</html>

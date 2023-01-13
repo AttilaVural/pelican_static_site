@@ -31,3 +31,5 @@ DEFAULT_PAGINATION = False
 RELATIVE_URLS = True
 
 THEME = "templates/notmyidea"
+
+# I added the following myself (Attila)
