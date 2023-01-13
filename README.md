@@ -10,7 +10,7 @@ Pelican does not make much use of JS unlike other SSG's like nuxt.js or hugo.
 Created based on the *pelican-quickstart* template.
 
 Initial setup after cloning repo
-> git clone -b test git@github.com:AttilaVural/AttilaVural.github.io.git
+> git clone git@github.com:AttilaVural/AttilaVural.github.io.git
 
 > cd AttilaVural.github.io
 
